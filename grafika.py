@@ -3,7 +3,7 @@ import os
 import time
 import nastaveni as cfg
 
-# Zkusime importovat plotext, pokud je nainstalovan
+
 try:
     import plotext as plt
     MA_PLOTEXT = True
@@ -11,7 +11,7 @@ except ImportError:
     MA_PLOTEXT = False
 
 def vycistit_konzoli():
-    # Univerzalni mazani pro Windows i VS Code terminal
+   
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\033[H\033[2J", end="")
 
@@ -42,7 +42,7 @@ def progress_bar(popis):
 def zobrazit_logo():
     vycistit_konzoli() 
     cara("=")
-    zahlavi("FINANCNI MANAZER v9.0") # Verze 9 (Modularni)
+    zahlavi("FINANCNI MANAZER v") 
     zahlavi("Modularni System")
     cara("=")
     print()
@@ -95,3 +95,4 @@ def ziskej_cislo(popis):
 
 def ziskej_text(popis):
     return input(f"   > {popis}: ").strip()
+

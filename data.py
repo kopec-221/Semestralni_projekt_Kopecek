@@ -61,17 +61,16 @@ def export_do_excelu():
             
         workbook = xlsxwriter.Workbook(nazev_souboru)
         
-        # --- VYTVORENI LISTU ---
-        # 1. Prehledova tabulka
+        
         ws_prehled = workbook.add_worksheet("Prehled")
-        # 2. Zde budou grafy pod sebou
+       
         ws_galerie = workbook.add_worksheet("Galerie_Grafu")
-        # 3. Pomocny list pro data grafu (aby neprekazela)
+       
         ws_data = workbook.add_worksheet("Data_Grafy")
         
         # --- FORMATY ---
         bold = workbook.add_format({'bold': True})
-        # Format meny bez hacku a carek
+      
         money_fmt = workbook.add_format({'num_format': '#,##0 Kc'})
         date_fmt = workbook.add_format({'align': 'center'})
         header_fmt = workbook.add_format({'bold': True, 'bg_color': '#D3D3D3', 'border': 1})
@@ -90,7 +89,7 @@ def export_do_excelu():
         
         # --- HLAVNI SMYCKA PRES VSECHNY ZAZNAMY ---
         for i, z in enumerate(data):
-            # 1. Zapis do tabulky Prehled
+           
             cista = z.get("cista", z.get("cista_mzda", 0))
             vydaje = z.get("vydaje_celkem", 0)
             zustatek = z.get("zustatek", cista - vydaje)
@@ -106,7 +105,7 @@ def export_do_excelu():
             # 2. Generovani grafu (pokud ma zaznam vydaje)
             detail = z.get('vydaje_detail', {})
             if detail:
-                # A) Zapis dat pro graf do skryteho listu
+                
                 start_row = row_data_grafy
                 ws_data.write(start_row, 0, f"ID_{i}") 
                 
@@ -152,4 +151,5 @@ def export_do_excelu():
     except Exception as e:
         gui.blok_text(f"CHYBA EXPORTU: {e}", "<")
         
+
     input("\n   > Enter pro navrat...")

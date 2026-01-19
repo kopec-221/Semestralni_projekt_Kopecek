@@ -11,7 +11,7 @@ except ImportError:
     MA_PLOTEXT = False
 
 def vycistit_konzoli():
-   
+    
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\033[H\033[2J", end="")
 
@@ -42,8 +42,8 @@ def progress_bar(popis):
 def zobrazit_logo():
     vycistit_konzoli() 
     cara("=")
-    zahlavi("FINANCNI MANAZER v") 
-    zahlavi("Modularni System")
+    zahlavi("FINANCNI MANAZER ") 
+    zahlavi("Matyas Kopecek")
     cara("=")
     print()
 
@@ -95,4 +95,3 @@ def ziskej_cislo(popis):
 
 def ziskej_text(popis):
     return input(f"   > {popis}: ").strip()
-

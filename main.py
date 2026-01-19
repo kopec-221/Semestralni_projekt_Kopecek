@@ -3,6 +3,7 @@ import time
 import os
 import json
 
+# Importujeme nase nove moduly
 import nastaveni as cfg
 import grafika as gui
 import vypocty as calc
@@ -221,4 +222,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

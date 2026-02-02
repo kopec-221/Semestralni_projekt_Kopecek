@@ -3,7 +3,7 @@ import math
 import nastaveni as cfg
 
 def zaokrouhlit_nahoru(cislo):
-    """Pomocna funkce pro zaokrouhleni na cele koruny nahoru."""
+    
     return math.ceil(cislo)
 
 def vypocet_mzdy(hruba, podepsano, deti):
@@ -29,7 +29,7 @@ def vypocet_mzdy(hruba, podepsano, deti):
     dan_realna = max(0, zaloha_dan - sleva)
     dan_realna = zaokrouhlit_nahoru(dan_realna)
 
-    # 5. Cista mzda
+    
     cista = hruba - soc - zdr - dan_realna
     
     return int(cista), int(soc), int(zdr), int(dan_realna)

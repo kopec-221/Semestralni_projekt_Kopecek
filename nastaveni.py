@@ -4,7 +4,7 @@ DATA_FILE = "financni_data.json"
 SIRKA_UI = 60
 ZNAK_GRAFU = "#"
 
-# Sazby (CZ 2025)
+# Sazby 
 
 SOC_POJISTENI_SAZBA = 0.071 
 ZDR_POJISTENI_SAZBA = 0.045
@@ -20,6 +20,6 @@ KATEGORIE = {
     "2": "Jidlo",
     "3": "Doprava",
     "4": "Zabava",
-    "5": "Pojisteni/Spor.",
+    "5": "Pojisteni",
     "6": "Ostatni"
 }
